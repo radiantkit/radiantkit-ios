@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
   s.license  = { :type => 'MIT', :file => 'license.txt' }
   s.author   = { 'neoneye' => 'neoneye@gmail.com' }
   s.source   = { :git => 'https://github.com/radiantkit/radiantkit-ios.git', :tag => s.version.to_s }
-  s.ios.deployment_target = '10.0'
-  s.source_files = 'RadiantKit/*'
+  s.ios.deployment_target = '12.0'
+  s.source_files = 'RadiantKit/*.swift'
   s.swift_versions = ['5.0']
   s.requires_arc = true
 end
