@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4206A2A322B52F4F001C4EEB /* RadiantKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4206A29922B52F4F001C4EEB /* RadiantKit.framework */; };
-		4206A2A822B52F4F001C4EEB /* RadiantKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206A2A722B52F4F001C4EEB /* RadiantKitTests.swift */; };
 		4206A2AA22B52F4F001C4EEB /* RadiantKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4206A29C22B52F4F001C4EEB /* RadiantKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4206A2B422B532C6001C4EEB /* RKMath+Remap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206A2B322B532C6001C4EEB /* RKMath+Remap.swift */; };
+		4206A2B622B5337F001C4EEB /* RKMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206A2B522B5337F001C4EEB /* RKMath.swift */; };
+		4206A2B822B53401001C4EEB /* RKMathRemapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4206A2B722B53401001C4EEB /* RKMathRemapTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +29,10 @@
 		4206A29C22B52F4F001C4EEB /* RadiantKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RadiantKit.h; sourceTree = "<group>"; };
 		4206A29D22B52F4F001C4EEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4206A2A222B52F4F001C4EEB /* RadiantKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadiantKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4206A2A722B52F4F001C4EEB /* RadiantKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiantKitTests.swift; sourceTree = "<group>"; };
 		4206A2A922B52F4F001C4EEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4206A2B322B532C6001C4EEB /* RKMath+Remap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RKMath+Remap.swift"; sourceTree = "<group>"; };
+		4206A2B522B5337F001C4EEB /* RKMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMath.swift; sourceTree = "<group>"; };
+		4206A2B722B53401001C4EEB /* RKMathRemapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKMathRemapTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +75,10 @@
 		4206A29B22B52F4F001C4EEB /* RadiantKit */ = {
 			isa = PBXGroup;
 			children = (
-				4206A29C22B52F4F001C4EEB /* RadiantKit.h */,
 				4206A29D22B52F4F001C4EEB /* Info.plist */,
+				4206A29C22B52F4F001C4EEB /* RadiantKit.h */,
+				4206A2B522B5337F001C4EEB /* RKMath.swift */,
+				4206A2B322B532C6001C4EEB /* RKMath+Remap.swift */,
 			);
 			path = RadiantKit;
 			sourceTree = "<group>";
@@ -80,8 +86,8 @@
 		4206A2A622B52F4F001C4EEB /* RadiantKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				4206A2A722B52F4F001C4EEB /* RadiantKitTests.swift */,
 				4206A2A922B52F4F001C4EEB /* Info.plist */,
+				4206A2B722B53401001C4EEB /* RKMathRemapTests.swift */,
 			);
 			path = RadiantKitTests;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				TargetAttributes = {
 					4206A29822B52F4F001C4EEB = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					4206A2A122B52F4F001C4EEB = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -194,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4206A2B622B5337F001C4EEB /* RKMath.swift in Sources */,
+				4206A2B422B532C6001C4EEB /* RKMath+Remap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4206A2A822B52F4F001C4EEB /* RadiantKitTests.swift in Sources */,
+				4206A2B822B53401001C4EEB /* RKMathRemapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +350,7 @@
 		4206A2AE22B52F4F001C4EEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = neoneye.RadiantKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +376,7 @@
 		4206A2AF22B52F4F001C4EEB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +401,7 @@
 		4206A2B122B52F4F001C4EEB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RadiantKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +419,7 @@
 		4206A2B222B52F4F001C4EEB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RadiantKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
