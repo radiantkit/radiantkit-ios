@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'RadiantKit'
-  s.version  = '0.1.0'
+  s.version  = '0.1-beta1'
   s.summary  = 'A simple math function'
   s.homepage = 'https://github.com/radiantkit/radiantkit-ios'
   s.license  = { :type => 'MIT', :file => 'license.txt' }
